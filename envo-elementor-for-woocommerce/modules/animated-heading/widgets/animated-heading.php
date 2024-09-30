@@ -461,6 +461,8 @@ class AnimatedHeading extends Widget_Base {
 
 		<?php
 		$type_heading = explode(',', esc_html($settings['animated_heading']));
+		$loopCount = isset($settings['loop_count']) ? $settings['loop_count'] : 0;
+		$loop = ('yes' == $settings['loop']) ? 'true' : 'false';
 
 		if($settings['animated_heading']) { ?>
 			<script>
@@ -475,12 +477,12 @@ class AnimatedHeading extends Widget_Base {
 					<?php } else if('typed' == $settings['heading_layout']) { ?>
 						var typed 		= new Typed('#etww-animated-heading-<?php echo esc_attr($id); ?> .etww-animated-heading', {
 							strings 	: <?php echo json_encode($type_heading); ?>,
-							typeSpeed 	: <?php echo esc_attr($settings['type_speed']); ?>,
-							startDelay 	: <?php echo esc_attr($settings['start_delay']); ?>,
-							backSpeed 	: <?php echo esc_attr($settings['back_speed']); ?>,
-							backDelay 	: <?php echo esc_attr($settings['back_delay']); ?>,
-							loop 		: <?php echo ('yes' == $settings['loop']) ? 'true' : 'false'; ?>,
-							loopCount 	: <?php echo ($settings['loop_count']) ? esc_attr($settings['loop_count']) : 0; ?>,
+							typeSpeed 	: <?php echo absint($settings['type_speed']); ?>,
+							startDelay 	: <?php echo absint($settings['start_delay']); ?>,
+							backSpeed 	: <?php echo absint($settings['back_speed']); ?>,
+							backDelay 	: <?php echo absint($settings['back_delay']); ?>,
+							loop 		: <?php echo esc_attr($loop) ?>,
+							loopCount 	: <?php echo absint($loopCount); ?>,
 						});
 					<?php } ?>
 

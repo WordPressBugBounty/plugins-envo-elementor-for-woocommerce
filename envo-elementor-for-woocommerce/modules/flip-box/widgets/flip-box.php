@@ -58,7 +58,7 @@ class FlipBox extends Widget_Base {
 					],
 					'image' => [
 						'title' => __('Image', 'etww'),
-						'icon'  => 'fa fa-picture-o',
+						'icon'  => 'fas fa-image',
 					],
 					'icon' => [
 						'title' => __('Icon', 'etww'),
@@ -609,8 +609,8 @@ class FlipBox extends Widget_Base {
 				'type' 			=> Controls_Manager::COLOR,
 				'default' 		=> '',
 				'selectors' 	=> [
-					'{{WRAPPER}} .elementor-view-stacked .elementor-icon' => 'background-color: {{VALUE}}',
 					'{{WRAPPER}} .elementor-view-framed .elementor-icon, {{WRAPPER}} .elementor-view-default .elementor-icon' => 'color: {{VALUE}}; border-color: {{VALUE}}',
+					'{{WRAPPER}} .elementor-icon svg' => 'fill: {{VALUE}};',
 				],
 				'condition' 	=> [
 					'graphic_element' => 'icon',
@@ -626,7 +626,7 @@ class FlipBox extends Widget_Base {
 				'default' 		=> '',
 				'selectors' 	=> [
 					'{{WRAPPER}} .elementor-view-framed .elementor-icon' => 'background-color: {{VALUE}};',
-					'{{WRAPPER}} .elementor-view-stacked .elementor-icon' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .elementor-view-stacked .elementor-icon' => 'background-color: {{VALUE}};',
 				],
 				'condition' 	=> [
 					'graphic_element' => 'icon',
@@ -1260,14 +1260,14 @@ class FlipBox extends Widget_Base {
 
 						if(! empty($settings['front_title_text'])) { ?>
 							<h3 class="etww-flip-box-layer-title">
-								<?php echo $settings['front_title_text']; ?>
+								<?php echo $this->parse_text_editor($settings['front_title_text']); ?>
 							</h3>
 						<?php
 						}
 
 						if(! empty($settings['front_description_text'])) { ?>
 							<div class="etww-flip-box-layer-desc">
-								<?php echo $settings['front_description_text']; ?>
+								<?php echo $this->parse_text_editor($settings['front_description_text']); ?>
 							</div>
 						<?php
 						} ?>
@@ -1275,33 +1275,33 @@ class FlipBox extends Widget_Base {
 				</div>
 			</div>
 
-			<<?php echo $wrap_tag; ?> <?php echo $this->get_render_attribute_string('wrap'); ?>>
+			<<?php echo esc_attr($wrap_tag); ?> <?php echo $this->get_render_attribute_string('wrap'); ?>>
 				<div class="etww-flip-box-layer-overlay">
 					<div class="etww-flip-box-layer-inner">
 						<?php
 						if(! empty($settings['back_title_text'])) { ?>
 							<h3 class="etww-flip-box-layer-title">
-								<?php echo $settings['back_title_text']; ?>
+								<?php echo $this->parse_text_editor($settings['back_title_text']); ?>
 							</h3>
 						<?php
 						}
 
 						if(! empty($settings['back_description_text'])) { ?>
 							<div class="etww-flip-box-layer-desc">
-								<?php echo $settings['back_description_text']; ?>
+								<?php echo $this->parse_text_editor($settings['back_description_text']); ?>
 							</div>
 						<?php
 						}
 
 						if(! empty($settings['button_text'])) { ?>
-							<<?php echo $button_tag; ?> <?php echo $this->get_render_attribute_string('button'); ?>>
-								<?php echo $settings['button_text']; ?>
-							</<?php echo $button_tag; ?>>
+							<<?php echo esc_attr($button_tag); ?> <?php echo $this->get_render_attribute_string('button'); ?>>
+								<?php echo $this->parse_text_editor($settings['button_text']); ?>
+							</<?php echo esc_attr($button_tag); ?>>
 						<?php
 						} ?>
 					</div>
 				</div>
-			</<?php echo $wrap_tag; ?>>
+			</<?php echo esc_attr($wrap_tag); ?>>
 
 		</div>
 

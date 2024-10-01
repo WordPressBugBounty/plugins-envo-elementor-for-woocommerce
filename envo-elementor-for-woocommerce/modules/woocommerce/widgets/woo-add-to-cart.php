@@ -494,7 +494,7 @@ class Woo_Add_To_Cart extends Widget_Base {
 
             $this->add_render_attribute(
                     'button', [
-                'href' => $product->add_to_cart_url(),
+                'href' => esc_url($product->add_to_cart_url()),
                 'class' => $class,
                 'data-quantity' => (isset($settings['quantity']) ? $settings['quantity'] : 1),
                 'data-product_id' => $product_id,

@@ -416,7 +416,7 @@ class AnimatedHeading extends Widget_Base {
 		$this->add_render_attribute('heading', 'class', 'etww-heading-tag');
 
 		if(! empty($settings['link']['url'])) {
-			$this->add_render_attribute('heading', 'href', $settings['link']['url']);
+			$this->add_render_attribute('heading', 'href', esc_url($settings['link']['url']));
 
 			if($settings['link']['is_external']) {
 				$this->add_render_attribute('heading', 'target', '_blank');

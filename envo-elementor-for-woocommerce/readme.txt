@@ -3,7 +3,7 @@ Contributors: EnvoThemes
 Tags: elementor, woocommerce, templates, woo, widgets
 Requires at least: 4.4
 Tested up to: 6.6
-Stable tag: 1.4.19
+Stable tag: 1.4.20
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -140,6 +140,9 @@ No, Elementor PRO or any other PRO addon is not required.
 10. WooCommerce Elementor Widgets
 
 == Changelog ==
+
+= 1.4.20 =
+* Security update
 
 = 1.4.19 =
 * Fixed incorrectly tagged version

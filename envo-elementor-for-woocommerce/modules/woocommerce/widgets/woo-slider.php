@@ -1210,7 +1210,7 @@ class Woo_Slider extends Widget_Base {
 
         $this->add_render_attribute('data', 'data-settings', wp_json_encode($slick_options));
 
-        echo '<div class="etww-woo-slider woocommerce columns-' . $woocommerce_loop['columns'] . '" ' . $this->get_render_attribute_string('data') . '>';
+        echo '<div class="etww-woo-slider woocommerce columns-' . esc_attr($woocommerce_loop['columns']) . '" ' . $this->get_render_attribute_string('data') . '>';
 
         echo '<ul class="products etww-row clr">';
 

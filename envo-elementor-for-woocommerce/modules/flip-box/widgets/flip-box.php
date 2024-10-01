@@ -1198,7 +1198,7 @@ class FlipBox extends Widget_Base {
 		$settings 		= $this->get_settings_for_display();
 		$wrap_tag 		= 'div';
 		$button_tag 	= 'a';
-		$link_url 		= empty($settings['link']['url']) ? '#' : $settings['link']['url'];
+		$link_url 		= empty($settings['link']['url']) ? '#' : esc_url($settings['link']['url']);
 
 		$this->add_render_attribute('wrap', 'class', 'etww-flip-box-layer etww-flip-box-back');
 		
@@ -1225,10 +1225,10 @@ class FlipBox extends Widget_Base {
 
 		if('icon' === $settings['graphic_element']) {
 			$this->add_render_attribute('icon-wrap', 'class', 'elementor-icon-wrap');
-			$this->add_render_attribute('icon-wrap', 'class', 'elementor-view-' . $settings['icon_view']);
+			$this->add_render_attribute('icon-wrap', 'class', 'elementor-view-' . esc_html($settings['icon_view']));
 
 			if('default' != $settings['icon_view']) {
-				$this->add_render_attribute('icon-wrap', 'class', 'elementor-shape-' . $settings['icon_shape']);
+				$this->add_render_attribute('icon-wrap', 'class', 'elementor-shape-' . esc_html($settings['icon_shape']));
 			}
 
 			if(! empty($settings['icon'])) {

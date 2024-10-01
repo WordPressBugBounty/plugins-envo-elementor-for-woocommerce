@@ -554,7 +554,7 @@ class Pricing extends Widget_Base {
             if ($content) {
                 ?>
 
-                <div class="etww-pricing-content clr"><?php echo do_shortcode($content); ?></div>
+                <div class="etww-pricing-content clr"><?php echo $this->parse_text_editor($content); ?></div>
 
             <?php } ?>
 

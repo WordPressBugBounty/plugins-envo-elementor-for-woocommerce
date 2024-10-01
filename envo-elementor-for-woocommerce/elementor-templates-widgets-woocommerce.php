@@ -4,7 +4,7 @@
  * Plugin Name: Envo's Elementor Templates & Widgets for WooCommerce
  * Description: Elementor templates library and widgets for WooCommerce.
  * Plugin URI: 	https://envothemes.com/elementor-templates-for-woocommerce/
- * Version: 	1.4.19
+ * Version: 	1.4.20
  * Author: 	EnvoThemes
  * Author URI: 	https://envothemes.com/
  * License:  	GPL-2.0+

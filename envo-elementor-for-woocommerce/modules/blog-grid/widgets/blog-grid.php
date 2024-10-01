@@ -773,8 +773,7 @@ class Blog_Grid extends Widget_Base {
 
 					// Meta class
 					$meta_class = '';
-					if('false' == $comments
-						|| 'false' == $cat) {
+					if('false' == $comments || 'false' == $cat) {
 						$meta_class = ' etww-center';
 					}
 
@@ -811,7 +810,7 @@ class Blog_Grid extends Widget_Base {
 
 										<div class="etww-grid-media clr">
 
-											<a href="<?php echo $post->permalink; ?>" title="<?php the_title(); ?>" class="etww-grid-img">
+											<a href="<?php echo esc_url($post->permalink); ?>" title="<?php esc_attr(the_title()); ?>" class="etww-grid-img">
 
 												<?php
 												// Display post thumbnail
@@ -825,7 +824,7 @@ class Blog_Grid extends Widget_Base {
 													// Display read more
 													if('' != $readmore) { ?>
 														<span class="overlay-btn">
-															<?php echo $readmore; ?>
+															<?php echo esc_html($readmore); ?>
 														</span>
 													<?php } ?>
 												</span>
@@ -857,7 +856,7 @@ class Blog_Grid extends Widget_Base {
 											if('yes' == $title) { ?>
 
 												<h2 class="etww-grid-title entry-title">
-													<a href="<?php echo $post->permalink; ?>" title="<?php the_title(); ?>"><?php echo $post->title; ?></a>
+													<a href="<?php echo esc_url($post->permalink); ?>" title="<?php esc_html(the_title()); ?>"><?php echo esc_html($post->title); ?></a>
 												</h2>
 
 											<?php } ?>

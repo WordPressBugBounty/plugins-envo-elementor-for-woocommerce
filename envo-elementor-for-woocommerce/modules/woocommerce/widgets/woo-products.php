@@ -1054,7 +1054,7 @@ class Woo_Products extends Widget_Base {
 
         $woocommerce_loop['columns'] = (int) $settings['columns'];
 
-        echo '<div class="woocommerce columns-' . $woocommerce_loop['columns'] . '">';
+        echo '<div class="woocommerce columns-' . esc_attr($woocommerce_loop['columns']) . '">';
 
         woocommerce_product_loop_start();
 

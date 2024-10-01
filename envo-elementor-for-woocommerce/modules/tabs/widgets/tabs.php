@@ -1217,7 +1217,7 @@ class Tabs extends Widget_Base {
                             <?php
 
                             if ($item['tab_title']) {
-                                echo $item['tab_title'];
+                                echo esc_html($item['tab_title']);
                             }
 
                             ?>
@@ -1254,7 +1254,7 @@ class Tabs extends Widget_Base {
                         <?php
 
                         if ($item['tab_title']) {
-                            echo $item['tab_title'];
+                            echo esc_html($item['tab_title']);
                         }
 
                         ?>
@@ -1293,7 +1293,7 @@ class Tabs extends Widget_Base {
                         <div <?php echo $this->get_render_attribute_string($tab_title_key); ?>>
                             <?php
                             if ($item['tab_title']) {
-                                echo $item['tab_title'];
+                                echo esc_html($item['tab_title']);
                             }
                             ?>
                         </div>

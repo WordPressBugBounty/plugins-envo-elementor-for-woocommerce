@@ -2,8 +2,8 @@
 Contributors: EnvoThemes
 Tags: elementor, woocommerce, templates, woo, widgets
 Requires at least: 4.4
-Tested up to: 6.6
-Stable tag: 1.4.20
+Tested up to: 6.7
+Stable tag: 1.4.21
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -50,6 +50,7 @@ The product design in the demo is loaded from free WooCommerce theme: [Envo Stor
 == Supported Themes ==
 The following themes are tested with Elementor and WooCommerce and are compatible without major issues:
 
+* [Envo One](https://envothemes.com/envo-one-woocommerce/) - by EnvoThemes
 * [Envo Royal](https://envothemes.com/envo-royal-free-wp-theme/) - by EnvoThemes
 * [Enwoo](https://enwoo-wp.com/) - by EnvoThemes
 * [Entr](https://envothemes.com/entr-free-wp-theme/) - by EnvoThemes
@@ -140,6 +141,10 @@ No, Elementor PRO or any other PRO addon is not required.
 10. WooCommerce Elementor Widgets
 
 == Changelog ==
+
+= 1.4.21 =
+* Tagged for WP 6.7
+* Tested with Elementor 3.25
 
 = 1.4.20 =
 * Security update

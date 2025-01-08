@@ -419,6 +419,16 @@ class Search extends Widget_Base {
 				],
 			]
 		);
+		$this->add_control(
+			'btn_bg_color',
+			[
+				'label' 		=> __('Background Color', 'etww'),
+				'type' 			=> Controls_Manager::COLOR,
+				'selectors' 	=> [
+					'{{WRAPPER}} .etww-searchform button' => 'background-color: {{VALUE}};',
+				],
+			]
+		);
 
 		$this->end_controls_tab();
 
@@ -436,6 +446,16 @@ class Search extends Widget_Base {
 				'type' 			=> Controls_Manager::COLOR,
 				'selectors' 	=> [
 					'{{WRAPPER}} .etww-searchform button:hover' => 'color: {{VALUE}};',
+				],
+			]
+		);
+		$this->add_control(
+			'btn_bg_color_hover',
+			[
+				'label' 		=> __('Background Color', 'etww'),
+				'type' 			=> Controls_Manager::COLOR,
+				'selectors' 	=> [
+					'{{WRAPPER}} .etww-searchform button:hover' => 'background-color: {{VALUE}};',
 				],
 			]
 		);

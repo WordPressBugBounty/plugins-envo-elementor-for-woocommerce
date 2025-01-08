@@ -3,7 +3,7 @@ Contributors: EnvoThemes
 Tags: elementor, woocommerce, templates, woo, widgets
 Requires at least: 4.4
 Tested up to: 6.7
-Stable tag: 1.4.21
+Stable tag: 1.4.22
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -141,6 +141,11 @@ No, Elementor PRO or any other PRO addon is not required.
 10. WooCommerce Elementor Widgets
 
 == Changelog ==
+
+= 1.4.22 =
+* Fixed missing ajax search button background color
+* Tested with Elementor 3.27
+* Tested with WooCommerce 9.5
 
 = 1.4.21 =
 * Tagged for WP 6.7

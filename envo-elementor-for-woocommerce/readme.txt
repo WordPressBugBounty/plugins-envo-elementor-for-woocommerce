@@ -3,20 +3,20 @@ Contributors: EnvoThemes
 Tags: elementor, woocommerce, templates, woo, widgets
 Requires at least: 4.4
 Tested up to: 6.9
-Stable tag: 1.4.24
+Stable tag: 1.4.25
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-WooCommerce Elementor addon with Elementor Templates & Widgets for WooCommerce
+Addon with WooCommerce Templates & Widgets for Elementor
 
 == Description ==
-Envo's Elementor Templates & Widgets for WooCommerce is a WooCommerce addon for Elementor Page Builder. It comes with free multiple WooCommerce Elementor templates designed for WooCommerce stores and multiple Elementor widgets, including WooCommerce products displayed in grid or carousel layout. 
+Envo's Templates & Widgets for Elementor and WooCommerce is a WooCommerce addon for Elementor Page Builder. It comes with free multiple WooCommerce templates for Elementor designed for WooCommerce stores with multiple Elementor widgets, including WooCommerce products displayed in grid or carousel layout. 
 
 == Elementor WooCommerce templates ==
-* 8 homepage Elementor WooCommerce templates
-* 2 contact Elementor templates
-* 2 faq Elementor page template
+* 8 homepage WooCommerce templates for Elementor
+* 2 contact templates for Elementor
+* 2 faq page templates for Elementor
 * More comming soon
 
 You can see the demo pages here : [Live Demo](https://envothemes.com/elementor-templates-for-woocommerce/)
@@ -37,9 +37,9 @@ The product design in the demo is loaded from free WooCommerce theme: [Envo Stor
 * Animated Heading Widget - Heading with beautiful animations
 
 == Features ==
-* Multiple WooCommerce Elementor templates
+* Multiple WooCommerce templates for Elementor
 * 12 Elementor widgets 
-* Elementor WooCommerce widgets
+* WooCommerce widgets for Elementor
 * WooCommerce featured, recent, on sale or custom product select with multiple include/exclude options
 * Contact Form 7 Elementor widget with styling options
 * Unlimited colors and font variants
@@ -95,11 +95,11 @@ This section describes how to install the Elementor Templates & Widgets for WooC
 = 1) Install =
 
 1. Go to the WordPress Dashboard "Add New Plugin" section.
-2. Search For "Envo's Elementor Templates & Widgets for WooCommerce".
+2. Search For "Envo's Templates & Widgets for Elementor and WooCommerce".
 3. Install, then Activate it.
 
 = OR =
-1. Unzip (if zipped) and Upload `elementor-templates-widgets-woocommerce` folder to the `/wp-content/plugins/` directory
+1. Unzip (if zipped) and Upload `envo-elementor-for-woocommerce` folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 = 2) Import =
@@ -108,7 +108,7 @@ This section describes how to install the Elementor Templates & Widgets for WooC
 3. Now go to WooCommerce - Templates library to import the Elementor templates
 
 = 3) Elementor Widgets =
-1. All our WooCommerce Elementor Widgets are available in Elementor builder under "ETWW Elements".
+1. All our WooCommerce Widgets are available in Elementor builder under "ETWW Elements".
 
 == Frequently Asked Questions ==
 = Does it work with any WordPress theme? =
@@ -141,6 +141,11 @@ No, Elementor PRO or any other PRO addon is not required.
 10. WooCommerce Elementor Widgets
 
 == Changelog ==
+
+= 1.4.25 =
+* Updated plugin description
+* Tested with Elementor 3.33
+* Tested with WooCommerce 10.3
 
 = 1.4.24 =
 * Renamed plugin

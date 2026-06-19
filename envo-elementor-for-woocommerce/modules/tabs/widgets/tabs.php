@@ -1265,7 +1265,9 @@ class Tabs extends Widget_Base {
                         if ('custom' == $item['source'] && !empty($item['tab_content'])) {
                             echo $this->parse_text_editor($item['tab_content']);
                         } else if ('template' == $item['source'] && ('0' != $item['templates'] && !empty($item['templates']))) {
-                            echo Plugin::instance()->frontend->get_builder_content_for_display($item['templates']);
+							if (get_post_status($item['templates']) === 'publish') {
+								echo Plugin::instance()->frontend->get_builder_content_for_display($item['templates']);
+							}
                         }
                         ?>
                     </div>

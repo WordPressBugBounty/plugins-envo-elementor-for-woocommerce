@@ -1,146 +1,138 @@
 === Envo's Templates & Widgets for Elementor and WooCommerce ===
 Contributors: EnvoThemes
-Tags: elementor, woocommerce, templates, woo, widgets
-Requires at least: 4.4
+Tags: elementor, woocommerce, elementor templates, woocommerce templates, elementor widgets
+Requires at least: 6.5
 Tested up to: 7.1
-Stable tag: 1.4.28
-Requires PHP: 5.6
+Stable tag: 2.0.0
+Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Addon with WooCommerce Templates & Widgets for Elementor
+Ready-made Elementor shop designs with their subpages, imported in one click, plus 12 Elementor widgets for WooCommerce.
 
 == Description ==
-Envo's Templates & Widgets for Elementor and WooCommerce is a WooCommerce addon for Elementor Page Builder. It comes with free multiple WooCommerce templates for Elementor designed for WooCommerce stores with multiple Elementor widgets, including WooCommerce products displayed in grid or carousel layout. 
 
-== Elementor WooCommerce templates ==
-* 8 homepage WooCommerce templates for Elementor
-* 2 contact templates for Elementor
-* 2 faq page templates for Elementor
-* More comming soon
+**Envo's Templates & Widgets** gives your WooCommerce store a finished look in minutes. Pick a design from the template library, choose its pages and import them. You get a home page with matching About, FAQ and Contact pages, all made with Elementor and ready to edit. Then add products, carousels, tabs and more with 12 widgets made for shops.
 
-You can see the demo pages here : [Live Demo](https://envothemes.com/elementor-templates-for-woocommerce/)
-The product design in the demo is loaded from free WooCommerce theme: [Envo Storefront](https://wordpress.org/themes/envo-storefront/)
+[Live demo](https://envothemes.com/elementor-templates-for-woocommerce/) | [Documentation](https://envothemes.com/docs/) | [PRO add-on](https://envothemes.com/product/elementor-templates-woocommerce-pro/)
 
-== Elementor Widgets for WooCommerce ==
-* WooCommerce Carousel Widget - WooCommerce products in carousel mode
-* WooCommerce Products Widget - WooCommerce products in grid mode
-* WooCommerce Categories Widget - WooCommerce categories in grid mode
-* WooCommerce Add To Cart Widget - WooCommerce add to cart button for selected product
-* WooCommerce Ajax Search Widget - Ajax search filed to search products (or posts/pages) live, without page redirection
-* Contact Form 7 Widget - Style contact forms from popular free plugin [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
-* Tabs Widget - Tabs with multiple layout options with products styling options - using [WooCommerce Shortcodes](https://docs.woocommerce.com/document/woocommerce-shortcodes/#section-9)
-* Price Table Widget - Pricing table widget with multiple design options
-* Off Canvas Button Widget - Open off canvas block, where you can show your sidebar or custom Elementor template
-* Flip Box Widget - Animated widget to show back side of box on hover
-* Blog Grid Widget - Show your blog feed
-* Animated Heading Widget - Heading with beautiful animations
+= Template library: whole designs, not just single pages =
 
-== Features ==
-* Multiple WooCommerce templates for Elementor
-* 12 Elementor widgets 
-* WooCommerce widgets for Elementor
-* WooCommerce featured, recent, on sale or custom product select with multiple include/exclude options
-* Contact Form 7 Elementor widget with styling options
-* Unlimited colors and font variants
-* Products styling
-* Products carousel
-* Categories widget
+The library (**Envo Templates** in the admin menu) has 80 designs for shops: fashion, electronics, furniture, kitchenware, beauty, sport, gaming and more. Every design is a home page together with its subpages, so the whole site looks consistent.
 
-== Supported Themes ==
-The following themes are tested with Elementor and WooCommerce and are compatible without major issues:
+* **Import a whole design.** Tick the pages you want and import them in one go. Links between the pages point to your new pages.
+* **Front page and menu.** Optionally set the imported home page as the front page of your site and create a menu with the new pages.
+* **Single pages.** About, FAQ, Contact, Shipping & Returns and other pages can be imported on their own, as a page, a post or into My Templates.
+* **Inside the Elementor editor.** The Envo Templates button (next to "Add Template") inserts a page into the page you are editing. Ctrl+Z takes it back.
+* **Required plugins.** WooCommerce or Contact Form 7 are installed and activated with one click before the import, if a page needs them.
+* **Images included.** Images of the pages are copied into your media library.
+* **Always up to date.** New designs are added to the library on our side. You see them right away, without updating the plugin.
+* **Free and PRO.** 13 designs are free. The [PRO add-on](https://envothemes.com/product/elementor-templates-woocommerce-pro/) unlocks 67 more designs and their pages.
 
-* [Envo One](https://envothemes.com/envo-one-woocommerce/) - by EnvoThemes
-* [Envo Royal](https://envothemes.com/envo-royal-free-wp-theme/) - by EnvoThemes
-* [Enwoo](https://enwoo-wp.com/) - by EnvoThemes
-* [Entr](https://envothemes.com/entr-free-wp-theme/) - by EnvoThemes
-* [Altr](https://envothemes.com/altr-free-wp-theme/) - by EnvoThemes
-* [Spacr](https://envothemes.com/spacr-free-wp-theme/) - by EnvoThemes
-* [Envo Shopper](https://envothemes.com/free-envo-shopper/) - by EnvoThemes
-* [Envo Marketplace](https://envothemes.com/free-envo-marketplace/) - by EnvoThemes
-* [Envo Online Store](https://envothemes.com/free-envo-online-store/) - by EnvoThemes
-* [Envo Shop](https://wordpress.org/themes/envo-shop/) - by EnvoThemes
-* [Envo Storefront](https://wordpress.org/themes/envo-storefront/) - by EnvoThemes
-* [Envo eCommerce](https://wordpress.org/themes/envo-ecommerce/) - by EnvoThemes
-* [Envo Multipurpose](https://wordpress.org/themes/envo-multipurpose/) - by EnvoThemes
-* [Twenty Twenty](https://wordpress.org/themes/twentytwenty/) - by WordPress.org
-* [Twenty Nineteen](https://wordpress.org/themes/twentynineteen/) - by WordPress.org
-* [Hello Elementor](https://wordpress.org/themes/hello-elementor/) - by Elementor
-* [OceanWP](https://wordpress.org/themes/oceanwp/) - by oceanwp
-* [Neve](https://wordpress.org/themes/neve/) - by Themeisle
-* [Go](https://wordpress.org/themes/go/) - by GoDaddy
-* [GeneratePress](https://wordpress.org/themes/generatepress/) - by Tom
-* [Hestia](https://wordpress.org/themes/hestia/) - by Themeisle
-* [Colibri WP](https://wordpress.org/themes/colibri-wp/) - by Extend Themes
-* [Sydney](https://wordpress.org/themes/sydney/) - by athemes
-* [Calliope](https://wordpress.org/themes/calliope/) - by Extend Themes
-* [Zakra](https://wordpress.org/themes/zakra/) - by ThemeGrill
-* [Customify](https://wordpress.org/themes/customify/) - by WPCustomify
-* [OnePress](https://wordpress.org/themes/onepress/) - by FameThemes
-* [Rife Free](https://wordpress.org/themes/rife-free/) - by apollo13themes
-* [Astra](https://wordpress.org/themes/astra/) - by Brainstorm Force
+= 12 Elementor widgets for WooCommerce stores =
 
-= Important Note =
+All widgets are in the Elementor panel under "ETWW Elements". Each one has its own styling options, and its scripts and styles load only on pages that use it.
 
-Envo's Elementor Templates & Widgets for WooCommerce uses 3rd party external service.
+* **Woo – Products:** featured, best selling, on sale, recent or hand-picked products in a grid, with include and exclude options.
+* **Woo – Carousel:** the same products in a sliding carousel.
+* **Woo – Categories:** product categories in a grid.
+* **Woo – Add To Cart:** an add to cart button for a product you choose.
+* **Ajax Search:** live search of products, posts or pages, without leaving the page.
+* **Tabs:** tabs with several layouts, for text, Elementor templates or WooCommerce product lists.
+* **Contact Form 7:** styling options for forms of the free [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) plugin.
+* **Price Table:** pricing tables in several designs.
+* **Flip Box:** a box that turns over on hover and shows its back side.
+* **Off Canvas:** a button that slides in a panel with your sidebar or any Elementor template.
+* **Blog Grid:** your latest posts in a grid.
+* **Animated Heading:** headings with typing and other animations.
 
-If You import an Elementor template, the template content will be imported from envothemes.com website.
-After requesting a template import, none of your personal data will be stored on envothemes.com. After the process You can replace or delete each imported content.
-[About the Plugin](https://envothemes.com/elementor-woocommerce-templates-and-widgets/)
-[envothemes.com terms & conditions](https://envothemes.com/terms-and-conditions/)
+= Works with your theme =
+
+The designs and widgets work with any theme that supports WooCommerce and Elementor. Products and categories keep the look of your theme. Our demos use the free [Envo Storefront](https://wordpress.org/themes/envo-storefront/) theme.
+
+Tested with themes by EnvoThemes, such as [Envo One](https://envothemes.com/envo-one-woocommerce/), [Envo Royal](https://envothemes.com/envo-royal-free-wp-theme/), [Enwoo](https://enwoo-wp.com/), [Entr](https://envothemes.com/entr-free-wp-theme/), [Spacr](https://envothemes.com/spacr-free-wp-theme/), [Envo Shop](https://wordpress.org/themes/envo-shop/), [Envo Storefront](https://wordpress.org/themes/envo-storefront/) and [Envo eCommerce](https://wordpress.org/themes/envo-ecommerce/). Also tested with Hello Elementor, Astra, OceanWP, GeneratePress, Neve, Sydney, Zakra and the Twenty Twenty themes.
+
+== External services ==
+
+The template library loads its designs from the EnvoThemes template library on [envothemes.com](https://envothemes.com/). The list of designs is also checked once a day in the background, so that you are told about new designs.
+
+* **List of designs** – loaded at most once a day (in the background or when the library is opened), or when you click Refresh. Only a plain request is sent; the address of your site is not sent. The background check can be turned off with `add_filter( 'etww/library/check_new', '__return_false' );`.
+* **Preview images** – loaded from envothemes.com and copied into `wp-content/uploads/etww-previews` of your site, so later visits show the local copies.
+* **Page content** – downloaded when you import or insert a page. Images used by the page are downloaded from envothemes.com into your media library by Elementor.
+* **PRO designs** – only when the PRO add-on is active, its licence key and your site's domain are sent with the request for a PRO page, so that the library can check the licence.
+
+No personal data is stored on envothemes.com. The library address can be changed with the `etww/library_url` filter or the `ETWW_LIBRARY_URL` constant.
+
+* [Terms and conditions](https://envothemes.com/terms-and-conditions/)
+* [Privacy policy](https://envothemes.com/privacy-policy/)
 
 == Installation ==
-This section describes how to install the Elementor Templates & Widgets for WooCommerce plugin and get it working.
 
-= 1) Install =
-
-1. Go to the WordPress Dashboard "Add New Plugin" section.
-2. Search For "Envo's Templates & Widgets for Elementor and WooCommerce".
-3. Install, then Activate it.
-
-= OR =
-1. Unzip (if zipped) and Upload `envo-elementor-for-woocommerce` folder to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-
-= 2) Import =
-1. After you install and activate the plugin you will get a notice to install Elementor/WooCommerce Plugin ( If allready install it then do not show notice. ).
-2. To install the plugin click on the "Button" Install Elementor/WooCommerce.
-3. Now go to WooCommerce - Templates library to import the Elementor templates
-
-= 3) Elementor Widgets =
-1. All our WooCommerce Widgets are available in Elementor builder under "ETWW Elements".
+1. In your dashboard go to Plugins › Add New Plugin and search for "Envo's Templates & Widgets for Elementor and WooCommerce". Or upload the `envo-elementor-for-woocommerce` folder to `/wp-content/plugins/`.
+2. Activate the plugin. It needs [Elementor](https://wordpress.org/plugins/elementor/), and WordPress asks you to install it first if it is missing. The WooCommerce widgets need [WooCommerce](https://wordpress.org/plugins/woocommerce/).
+3. Go to **Envo Templates** in the admin menu, pick a design, choose its pages and click Import. Or switch to Single pages and import one page.
+4. In the Elementor editor, click the Envo Templates button next to "Add Template" to insert a page into the page you are editing.
+5. Find the widgets in the Elementor panel under "ETWW Elements".
 
 == Frequently Asked Questions ==
-= Does it work with any WordPress theme? =
 
-Yes, it will work with any WordPress theme as long as you are using WooCommerce and Elementor as a page builder. However, some dynamic elements, such as a product or product category, appear in a different layout that is defined by the theme. Some themes override WooCommerce product styling and this can make some widget options inactive.
+= Is Elementor PRO required? =
 
-= My WooCommerce products look different as in the demo. =
+No. Everything works with the free Elementor plugin.
 
-The products or categories styling is loaded from the theme enabled on your website. Each theme that supports WooCommerce can have own products styling. Our demo is loaded with free Envo Storefront theme.
+= Do I need WooCommerce? =
 
-= Some product widget options not work? =
+The template library works without it. The WooCommerce widgets (products, carousel, categories, add to cart) and shop designs that show products need WooCommerce. The library tells you which plugins a design needs and installs them for you.
 
-Your theme override the WooCommerce styling, and this can make some widget options inactive. In this case we are sorry, but we can not help you. You can try different theme.
+= What exactly does a design import? =
 
-= Is the Elementor PRO required? =
+The pages you tick, as Elementor pages with their images. Your products, theme settings and other pages stay as they are. If you choose to, the home page becomes your front page and a menu with the new pages is created; assign it to a menu location of your theme under Appearance › Menus.
 
-No, Elementor PRO or any other PRO addon is not required.
+= My products look different than in the demo. =
+
+Product and category boxes get their look from your theme, and each theme styles WooCommerce in its own way. Our demos use the free Envo Storefront theme. Some themes override the WooCommerce styling, so a few widget style options may have no effect there.
+
+= How do I get the PRO designs? =
+
+Install and activate the [PRO add-on](https://envothemes.com/product/elementor-templates-woocommerce-pro/) and enter your licence key. The PRO designs in the library unlock right away.
+
+= Will my pages break when I update from version 1.x? =
+
+No. The widgets kept their names, settings and HTML, so pages made with them look the same. Only the template library is new; its old address redirects to Envo Templates.
+
+= Does the plugin slow down my site? =
+
+Each widget loads its scripts and styles only on pages that use it. The library runs only in the admin and in the Elementor editor.
 
 == Screenshots ==
 
-1. WooCommerce Elementor Homepage Template #1
-2. WooCommerce Elementor Homepage Template #2
-3. WooCommerce Elementor Homepage Template #3
-4. WooCommerce Elementor Homepage Template #4
-5. WooCommerce Elementor Homepage Template #5
-6. WooCommerce Elementor Contact Template #1
-7. WooCommerce Elementor Contact Template #2
-8. WooCommerce Elementor FAQ Template #1
-9. WooCommerce Elementor FAQ Template #2
-10. WooCommerce Elementor Widgets
+1. 80 ready-made shop designs – each one a home page with its About, FAQ and Contact pages
+2. Import a whole design: choose its pages, set the front page and create a menu
+3. Or import a single page – as a page, a post or into My Templates
+4. Insert a page right in the Elementor editor with the Envo Templates button
+5. 12 widgets for your shop in the Elementor panel
+6. WooCommerce products in a grid, a carousel or tabs
+7. Animated headings, flip boxes, pricing tables and more
+8. Start with the free designs and unlock more with the PRO add-on
 
 == Changelog ==
+
+= 2.0.0 =
+* New template library: designs with their subpages, imported as a whole or page by page
+* Import a single page as a new page, into My Templates, or insert it in the Elementor editor
+* Optional front page and menu after importing a design; links between the imported pages point to the new pages
+* Required plugins are installed and activated from the library
+* Templates load from the envothemes.com library, every file is checked with a checksum; PRO designs need an active PRO licence
+* Preview images are kept on your site
+* New designs are announced: a count in the menu, a notice on the dashboard and a "New" badge in the library
+* WooCommerce is no longer required for the library (WooCommerce widgets still need it)
+* The library moved from WooCommerce › Templates Library to Envo Templates (the old address redirects)
+* New plugin structure, widgets unchanged
+* Security: the post search of the widget settings needs a nonce and lists only published content; widget output escaped
+* Text domain changed to envo-elementor-for-woocommerce (the plugin slug), for translations on translate.wordpress.org
+* New readme, banner, icon and screenshots
+* Requires WordPress 6.5 and PHP 7.4
+* Tested with Elementor 4.3 and WooCommerce 11.2
 
 = 1.4.28 =
 * Tested with WP 7.1

@@ -1,0 +1,845 @@
+/* Envo Templates – library page */
+.etww-lib {
+	--etww-accent: #39b54a;
+	--etww-accent-dark: #2a8f39;
+	--etww-accent-soft: #e9f7eb;
+	--etww-pro: #f68e13;
+	--etww-pro-dark: #c76c05;
+	--etww-ink: #1d2327;
+	--etww-muted: #646970;
+	--etww-line: #e0e2e4;
+	--etww-surface: #fff;
+	--etww-bg: #f3f4f5;
+	--etww-radius: 10px;
+	--etww-shadow: 0 1px 2px rgba(16, 24, 40, .06), 0 1px 3px rgba(16, 24, 40, .1);
+	max-width: 1480px;
+	margin: 12px 0 40px;
+	color: var(--etww-ink);
+}
+.etww-lib *,
+.etww-dialog * {
+	box-sizing: border-box;
+}
+.etww-lib svg,
+.etww-dialog svg {
+	width: 16px;
+	height: 16px;
+	fill: currentColor;
+	flex: none;
+}
+
+/* Header */
+.etww-lib__head {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 20px 24px;
+	border-radius: var(--etww-radius);
+	background: linear-gradient(120deg, #17202a 0%, #1f3b2a 100%);
+	color: #fff;
+}
+.etww-lib__logo {
+	display: grid;
+	place-items: center;
+	width: 48px;
+	height: 48px;
+	border-radius: 12px;
+	background: var(--etww-accent);
+	color: #fff;
+}
+.etww-lib__logo svg {
+	width: 26px;
+	height: 26px;
+}
+.etww-lib__title {
+	flex: 1 1 220px;
+	min-width: 0;
+}
+.etww-lib__title h2 {
+	margin: 0 0 2px;
+	color: #fff;
+	font-size: 20px;
+	line-height: 1.3;
+}
+.etww-lib__title p {
+	margin: 0;
+	color: #c9d3cc;
+	font-size: 13px;
+}
+.etww-lib__head-actions {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+.etww-lib__head .etww-btn--ghost {
+	border-color: rgba(255, 255, 255, .35);
+	background: transparent;
+	color: #fff;
+}
+.etww-lib__head .etww-btn--ghost:hover {
+	background: rgba(255, 255, 255, .1);
+	color: #fff;
+}
+.etww-lib__pro-state {
+	padding: 6px 12px;
+	border-radius: 999px;
+	background: rgba(57, 181, 74, .2);
+	color: #b8f0c0;
+	font-weight: 600;
+	font-size: 12px;
+}
+
+/* Buttons */
+.etww-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	min-height: 36px;
+	padding: 0 14px;
+	border: 1px solid transparent;
+	border-radius: 8px;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color .15s, border-color .15s, color .15s;
+}
+.etww-btn:focus-visible,
+.etww-lib button:focus-visible,
+.etww-dialog button:focus-visible {
+	outline: 2px solid var(--etww-accent);
+	outline-offset: 2px;
+	box-shadow: none;
+}
+.etww-btn[disabled] {
+	opacity: .5;
+	cursor: not-allowed;
+}
+.etww-btn--primary {
+	background: var(--etww-accent);
+	color: #fff;
+}
+.etww-btn--primary:hover:not([disabled]),
+.etww-btn--primary:focus {
+	background: var(--etww-accent-dark);
+	color: #fff;
+}
+.etww-btn--ghost {
+	border-color: var(--etww-line);
+	background: var(--etww-surface);
+	color: var(--etww-ink);
+}
+.etww-btn--ghost:hover:not([disabled]) {
+	border-color: var(--etww-ink);
+	color: var(--etww-ink);
+}
+.etww-btn--pro {
+	background: var(--etww-pro);
+	color: #fff;
+}
+.etww-btn--pro:hover,
+.etww-btn--pro:focus {
+	background: var(--etww-pro-dark);
+	color: #fff;
+}
+.etww-btn--small {
+	min-height: 28px;
+	padding: 0 10px;
+	font-size: 12px;
+	border-color: var(--etww-accent);
+	background: var(--etww-surface);
+	color: var(--etww-accent-dark);
+}
+.etww-btn--small:hover {
+	background: var(--etww-accent-soft);
+}
+.etww-btn--large {
+	min-height: 44px;
+	padding: 0 20px;
+	font-size: 14px;
+}
+
+/* Toolbar */
+.etww-lib__toolbar {
+	position: sticky;
+	top: 32px;
+	z-index: 5;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin: 16px 0;
+	padding: 10px 0;
+	background: #f0f0f1;
+}
+.etww-lib__tabs {
+	display: flex;
+	gap: 4px;
+	padding: 4px;
+	border-radius: 10px;
+	background: #e2e5e7;
+}
+.etww-lib__tabs button {
+	padding: 8px 14px;
+	border: 0;
+	border-radius: 7px;
+	background: transparent;
+	color: var(--etww-muted);
+	font-size: 13px;
+	font-weight: 600;
+	cursor: pointer;
+}
+.etww-lib__tabs button[aria-selected="true"] {
+	background: var(--etww-surface);
+	color: var(--etww-ink);
+	box-shadow: var(--etww-shadow);
+}
+.etww-lib__count {
+	margin-left: 4px;
+	color: var(--etww-muted);
+	font-weight: 400;
+}
+.etww-lib__filters {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+}
+.etww-lib__seg {
+	display: flex;
+	border: 1px solid var(--etww-line);
+	border-radius: 8px;
+	overflow: hidden;
+	background: var(--etww-surface);
+}
+.etww-lib__seg button {
+	padding: 8px 12px;
+	border: 0;
+	border-left: 1px solid var(--etww-line);
+	background: transparent;
+	color: var(--etww-muted);
+	font-size: 13px;
+	cursor: pointer;
+}
+.etww-lib__seg button:first-child {
+	border-left: 0;
+}
+.etww-lib__seg button[aria-pressed="true"] {
+	background: var(--etww-ink);
+	color: #fff;
+}
+.etww-lib__filters select {
+	min-height: 36px;
+	border-color: var(--etww-line);
+	border-radius: 8px;
+}
+.etww-lib__search {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.etww-lib__search svg {
+	position: absolute;
+	left: 10px;
+	color: var(--etww-muted);
+}
+.etww-lib__search input[type="search"] {
+	width: 220px;
+	min-height: 36px;
+	padding-left: 32px;
+	border-color: var(--etww-line);
+	border-radius: 8px;
+}
+
+/* Grid */
+.etww-lib__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	gap: 20px;
+}
+.etww-card {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--etww-line);
+	border-radius: var(--etww-radius);
+	background: var(--etww-surface);
+	overflow: hidden;
+	box-shadow: var(--etww-shadow);
+	transition: box-shadow .2s, transform .2s;
+}
+.etww-card:hover {
+	box-shadow: 0 10px 24px rgba(16, 24, 40, .12);
+	transform: translateY(-2px);
+}
+.etww-card__shot {
+	position: relative;
+	display: block;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	padding: 0;
+	border: 0;
+	border-bottom: 1px solid var(--etww-line);
+	background: var(--etww-bg);
+	overflow: hidden;
+	cursor: pointer;
+}
+.etww-card__shot img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top center;
+	background-size: cover;
+	background-position: top center;
+	transition: object-position 2.5s ease-in-out;
+}
+/* The screenshot scrolls down on hover, like a quick look at the whole page. */
+.etww-card:hover .etww-card__shot img {
+	object-position: bottom center;
+}
+.etww-card.is-locked .etww-card__shot img {
+	filter: saturate(.85);
+}
+.etww-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	padding: 4px 8px;
+	border-radius: 999px;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: .04em;
+	text-transform: uppercase;
+	line-height: 1;
+}
+.etww-badge svg {
+	width: 11px;
+	height: 11px;
+}
+.etww-card__badges {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	display: flex;
+	gap: 6px;
+}
+.etww-card__badges .etww-badge {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+}
+.etww-badge--new {
+	background: #2271b1;
+	color: #fff;
+}
+.etww-badge--pro {
+	background: var(--etww-pro);
+	color: #fff;
+}
+.etww-badge--free {
+	background: var(--etww-accent-soft);
+	color: var(--etww-accent-dark);
+}
+.etww-card__pages {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 6px;
+	padding: 10px 16px 0;
+}
+.etww-card__page {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	min-width: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+	color: var(--etww-muted);
+	font-size: 11px;
+	text-align: left;
+	cursor: pointer;
+}
+.etww-card__page img,
+.etww-card__page .etww-lib__noimg {
+	display: block;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	border: 1px solid var(--etww-line);
+	border-radius: 6px;
+	object-fit: cover;
+	object-position: top center;
+	background-size: cover;
+	transition: border-color .15s;
+}
+.etww-card__page:hover img {
+	border-color: var(--etww-accent);
+}
+.etww-card__page span {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.etww-card__page--more {
+	align-items: center;
+	justify-content: center;
+	aspect-ratio: 4 / 3;
+	border: 1px dashed var(--etww-line);
+	border-radius: 6px;
+	color: var(--etww-ink);
+	font-size: 13px;
+	font-weight: 600;
+	text-align: center;
+}
+.etww-card__body {
+	flex: 1;
+	padding: 14px 16px 6px;
+}
+.etww-card__body h3 {
+	margin: 0 0 4px;
+	font-size: 15px;
+}
+.etww-card__body p {
+	margin: 0;
+	color: var(--etww-muted);
+	font-size: 12px;
+}
+.etww-card__actions {
+	display: flex;
+	gap: 8px;
+	padding: 10px 16px 16px;
+}
+.etww-card__actions .etww-btn {
+	flex: 1;
+}
+.etww-lib__noimg {
+	display: grid;
+	place-items: center;
+	width: 100%;
+	height: 100%;
+	color: #c3c4c7;
+}
+.etww-lib__noimg svg {
+	width: 40px;
+	height: 40px;
+}
+.etww-lib__message {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+	margin-top: 16px;
+	padding: 48px 20px;
+	border-radius: var(--etww-radius);
+	background: var(--etww-surface);
+	color: var(--etww-muted);
+	text-align: center;
+}
+.etww-lib__message.is-error {
+	color: #b32d2e;
+}
+.etww-lib__foot {
+	margin-top: 24px;
+	color: var(--etww-muted);
+	font-size: 12px;
+}
+
+/* Spinner */
+.etww-spinner {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	border: 2px solid currentColor;
+	border-right-color: transparent;
+	border-radius: 50%;
+	vertical-align: middle;
+	animation: etww-spin .7s linear infinite;
+}
+@keyframes etww-spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* Dialog */
+body.etww-dialog-open {
+	overflow: hidden;
+}
+.etww-dialog {
+	--etww-accent: #39b54a;
+	--etww-accent-dark: #2a8f39;
+	--etww-accent-soft: #e9f7eb;
+	--etww-pro: #f68e13;
+	--etww-pro-dark: #c76c05;
+	--etww-ink: #1d2327;
+	--etww-muted: #646970;
+	--etww-line: #e0e2e4;
+	--etww-surface: #fff;
+	--etww-bg: #f3f4f5;
+	position: fixed;
+	inset: 0;
+	z-index: 100000;
+	display: grid;
+	place-items: center;
+	padding: 24px;
+	background: rgba(17, 24, 28, .6);
+	color: var(--etww-ink);
+}
+.etww-dialog__box {
+	position: relative;
+	display: grid;
+	grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+	width: min(1040px, 100%);
+	max-height: calc(100vh - 48px);
+	border-radius: 14px;
+	background: var(--etww-surface);
+	overflow-x: hidden;
+	overflow-y: auto;
+	box-shadow: 0 24px 60px rgba(0, 0, 0, .3);
+}
+.etww-dialog__box:focus {
+	outline: none;
+}
+.etww-dialog__close {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	z-index: 2;
+	display: grid;
+	place-items: center;
+	width: 36px;
+	height: 36px;
+	border: 0;
+	border-radius: 50%;
+	background: var(--etww-bg);
+	color: var(--etww-ink);
+	cursor: pointer;
+}
+.etww-dialog__close:hover {
+	background: var(--etww-line);
+}
+/*
+ * Left: the preview in a window of a fixed height, the import settings under it. Right: the title, the pages, the
+ * plugins and the import button. The dialog is as tall as its content, so every setting is in sight at once; only a
+ * screen too low for it scrolls the whole dialog.
+ */
+.etww-dialog__side {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding: 24px;
+	background: var(--etww-bg);
+}
+.etww-dialog__shot {
+	height: 300px;
+	border: 1px solid var(--etww-line);
+	border-radius: var(--etww-radius);
+	background: var(--etww-surface);
+	overflow: hidden;
+}
+.etww-dialog__shot img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top center;
+	background-size: cover;
+}
+.etww-dialog__side .etww-options {
+	margin: 0;
+	padding: 14px 16px;
+	border-radius: var(--etww-radius);
+	background: var(--etww-surface);
+}
+.etww-dialog__main {
+	padding: 28px 28px 24px;
+}
+.etww-dialog__kicker {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 0 0 6px;
+	color: var(--etww-muted);
+	font-size: 12px;
+}
+.etww-dialog__main h2 {
+	margin: 0 40px 6px 0;
+	font-size: 22px;
+	line-height: 1.3;
+}
+.etww-dialog__desc {
+	color: var(--etww-muted);
+}
+.etww-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	color: var(--etww-accent-dark);
+	font-weight: 600;
+	text-decoration: none;
+}
+.etww-pages {
+	margin: 16px 0;
+	border: 1px solid var(--etww-line);
+	border-radius: var(--etww-radius);
+}
+.etww-pages__item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin: 0;
+	padding: 8px 12px;
+	border-top: 1px solid var(--etww-line);
+}
+.etww-pages__item:first-child {
+	border-top: 0;
+}
+.etww-pages__item.is-checked {
+	background: #fafdfa;
+}
+.etww-pages__item label {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	gap: 12px;
+	min-width: 0;
+	cursor: pointer;
+}
+.etww-pages__item input[type="checkbox"] {
+	margin: 0;
+}
+.etww-pages__thumb {
+	flex: none;
+	width: 56px;
+	height: 42px;
+	border: 1px solid var(--etww-line);
+	border-radius: 6px;
+	background: var(--etww-bg);
+	overflow: hidden;
+}
+.etww-pages__thumb img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+}
+.etww-pages__name {
+	font-weight: 600;
+}
+.etww-pages__preview {
+	color: var(--etww-muted);
+}
+.etww-tag {
+	margin-left: 6px;
+	padding: 2px 6px;
+	border-radius: 4px;
+	background: var(--etww-bg);
+	color: var(--etww-muted);
+	font-size: 11px;
+	font-weight: 600;
+}
+.etww-row-state {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	color: var(--etww-muted);
+	font-size: 12px;
+	text-align: right;
+}
+.etww-row-state.is-done {
+	color: var(--etww-accent-dark);
+}
+.etww-row-state.is-done a {
+	color: var(--etww-accent-dark);
+	font-weight: 600;
+}
+.etww-row-state.is-error {
+	max-width: 50%;
+	color: #b32d2e;
+}
+.etww-plugins,
+.etww-options,
+.etww-locked,
+.etww-done {
+	margin: 16px 0;
+	padding: 14px 16px;
+	border-radius: var(--etww-radius);
+	background: var(--etww-bg);
+}
+.etww-plugins h4 {
+	margin: 0 0 8px;
+}
+.etww-plugins ul {
+	margin: 0;
+}
+.etww-plugins li {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	margin: 6px 0 0;
+}
+.etww-plugins__ok {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	color: var(--etww-accent-dark);
+	font-weight: 600;
+}
+.etww-plugins__busy {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+.etww-plugins__no {
+	color: var(--etww-muted);
+}
+.etww-plugins__error {
+	flex-basis: 100%;
+	color: #b32d2e;
+}
+.etww-options {
+	border: 0;
+}
+.etww-options legend {
+	float: left;
+	width: 100%;
+	margin-bottom: 6px;
+	font-weight: 600;
+}
+.etww-options label {
+	display: block;
+	clear: both;
+	margin: 6px 0;
+}
+.etww-options__name input {
+	width: 220px;
+	margin-left: 6px;
+}
+.etww-locked {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 12px;
+	background: #fff6eb;
+	color: #7a4100;
+}
+.etww-locked svg {
+	width: 22px;
+	height: 22px;
+	color: var(--etww-pro);
+}
+.etww-locked p {
+	flex: 1;
+	min-width: 200px;
+	margin: 0;
+}
+.etww-done {
+	display: flex;
+	gap: 12px;
+	background: var(--etww-accent-soft);
+}
+.etww-done > svg {
+	width: 24px;
+	height: 24px;
+	color: var(--etww-accent-dark);
+}
+.etww-done p {
+	margin: 0 0 8px;
+}
+.etww-done__links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+.etww-dialog__actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+	margin-top: 20px;
+}
+.etww-note {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	color: var(--etww-muted);
+	font-size: 12px;
+}
+.etww-error {
+	color: #b32d2e;
+	font-weight: 600;
+}
+
+@media (max-width: 782px) {
+	.etww-lib__head {
+		flex-wrap: wrap;
+		padding: 16px;
+	}
+	.etww-lib__title {
+		flex-basis: calc(100% - 64px);
+	}
+	.etww-lib__head-actions {
+		width: 100%;
+	}
+	.etww-lib__toolbar {
+		position: static;
+	}
+	.etww-lib__filters,
+	.etww-lib__search,
+	.etww-lib__search input[type="search"] {
+		width: 100%;
+	}
+	.etww-dialog {
+		padding: 0;
+	}
+	.etww-dialog__box {
+		grid-template-columns: 1fr;
+		align-content: start;
+		max-height: 100vh;
+		height: 100%;
+		border-radius: 0;
+		overflow-y: auto;
+	}
+	.etww-dialog__side {
+		padding: 16px;
+	}
+	.etww-dialog__shot {
+		height: 220px;
+	}
+	.etww-dialog__main {
+		padding: 20px 16px 24px;
+	}
+}
+
+/* Import as: page / post / template */
+.etww-target__choices {
+	clear: both;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin-bottom: 6px;
+}
+.etww-options label.etww-target__choice {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	clear: none;
+	margin: 0;
+	padding: 7px 12px;
+	border: 1px solid var(--etww-line);
+	border-radius: 8px;
+	background: var(--etww-surface);
+	font-weight: 600;
+	cursor: pointer;
+}
+.etww-options label.etww-target__choice.is-active {
+	border-color: var(--etww-accent);
+	background: var(--etww-accent-soft);
+	color: var(--etww-accent-dark);
+}
+.etww-target__choice input[type="radio"] {
+	margin: 0;
+}

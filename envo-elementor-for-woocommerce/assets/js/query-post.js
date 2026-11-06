@@ -24,6 +24,7 @@
 					type:'POST',
 					data: {
 						action: 'etww_get_posts_title_by_id',
+						security: window.etwwQueryNonce,
 						id: ids
 					},
 
@@ -60,7 +61,8 @@
 					      	return {
 					        	q: params.term, // search term
 								post_type: self.model.get('post_type'),
-						        action: 'etww_get_posts_by_query'
+						        action: 'etww_get_posts_by_query',
+						        security: window.etwwQueryNonce
 					    	};
 						},
 						processResults: function(data) {

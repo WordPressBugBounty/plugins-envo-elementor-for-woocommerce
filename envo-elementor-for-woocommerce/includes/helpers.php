@@ -20,15 +20,15 @@ if (!function_exists('etww_get_available_tags')) {
     function etww_get_available_tags() {
 
         $tags = array(
-            'h1' => __('H1', 'etww'),
-            'h2' => __('H2', 'etww'),
-            'h3' => __('H3', 'etww'),
-            'h4' => __('H4', 'etww'),
-            'h5' => __('H5', 'etww'),
-            'h6' => __('H6', 'etww'),
-            'div' => __('div', 'etww'),
-            'span' => __('span', 'etww'),
-            'p' => __('p', 'etww'),
+            'h1' => __('H1', 'envo-elementor-for-woocommerce'),
+            'h2' => __('H2', 'envo-elementor-for-woocommerce'),
+            'h3' => __('H3', 'envo-elementor-for-woocommerce'),
+            'h4' => __('H4', 'envo-elementor-for-woocommerce'),
+            'h5' => __('H5', 'envo-elementor-for-woocommerce'),
+            'h6' => __('H6', 'envo-elementor-for-woocommerce'),
+            'div' => __('div', 'envo-elementor-for-woocommerce'),
+            'span' => __('span', 'envo-elementor-for-woocommerce'),
+            'p' => __('p', 'envo-elementor-for-woocommerce'),
         );
         $tags = apply_filters('etww_title_tags', $tags);
 
@@ -148,9 +148,9 @@ if (!function_exists('etww_get_available_sidebars')) {
         $sidebars = array();
 
         if (!$wp_registered_sidebars) {
-            $sidebars['0'] = __('No sidebars were found', 'etww');
+            $sidebars['0'] = __('No sidebars were found', 'envo-elementor-for-woocommerce');
         } else {
-            $sidebars['0'] = __('-- Select --', 'etww');
+            $sidebars['0'] = __('-- Select --', 'envo-elementor-for-woocommerce');
 
             foreach ($wp_registered_sidebars as $id => $sidebar) {
                 $sidebars[$id] = $sidebar['name'];
@@ -176,7 +176,7 @@ if (!function_exists('etww_get_available_templates')) {
             'posts_per_page' => -1
         ));
 
-        $result = array(__('-- Select --', 'etww'));
+        $result = array(__('-- Select --', 'envo-elementor-for-woocommerce'));
 
         if (!empty($templates) && !is_wp_error($templates)) {
             foreach ($templates as $item) {
@@ -279,13 +279,23 @@ if (!function_exists('etww_excerpt')) {
  */
 if (!function_exists('etww_ajax_search')) {
 
+    /**
+     * Live results of the Search widget for visitors. Public and read-only (published content of searchable post types
+     * only), so it works with page caching and has no nonce.
+     */
     function etww_ajax_search() {
 
-        $search = sanitize_text_field(wp_unslash($_POST['search']));
-        $post_type = sanitize_text_field(wp_unslash($_POST['post_type']));
+        // phpcs:disable WordPress.Security.NonceVerification.Missing -- public read-only search, see above.
+        $search    = isset($_POST['search']) ? mb_substr(sanitize_text_field(wp_unslash($_POST['search'])), 0, 100) : '';
+        $post_type = isset($_POST['post_type']) ? sanitize_key(wp_unslash($_POST['post_type'])) : 'any';
+        // phpcs:enable
+        $searchable = get_post_types(array('public' => true, 'exclude_from_search' => false));
+        if ('' === $search) {
+            wp_die();
+        }
         $args = array(
             's' => $search,
-            'post_type' => $post_type,
+            'post_type' => isset($searchable[$post_type]) ? $post_type : 'any',
             'post_status' => 'publish',
             'posts_per_page' => 5,
         );
@@ -305,14 +315,14 @@ if (!function_exists('etww_ajax_search')) {
 
             while ($query->have_posts()) : $query->the_post();
                 $output .= '<li>';
-                $output .= '<a href="' . get_permalink() . '" class="search-result-link clr">';
+                $output .= '<a href="' . esc_url(get_permalink()) . '" class="search-result-link clr">';
 
                 if (has_post_thumbnail()) {
-                    $output .= get_the_post_thumbnail(get_the_ID(), 'thumbnail', array('alt' => get_the_title(), 'itemprop' => 'image',));
+                    $output .= get_the_post_thumbnail(get_the_ID(), 'thumbnail', array('alt' => the_title_attribute(array('echo' => false)), 'itemprop' => 'image',));
                 }
 
-                $output .= '<div class="result-title">' . get_the_title() . '</div>';
-                $output .= '<i class="icon fa fa-arrow-' . $icon . '" aria-hidden="true"></i>';
+                $output .= '<div class="result-title">' . esc_html(get_the_title()) . '</div>';
+                $output .= '<i class="icon fa fa-arrow-' . esc_attr($icon) . '" aria-hidden="true"></i>';
                 $output .= '</a>';
                 $output .= '</li>';
             endwhile;
@@ -324,21 +334,22 @@ if (!function_exists('etww_ajax_search')) {
                   $search_link .= '?post_type='. $post_type;
                   } */
 
-                $output .= '<li><a href="' . $search_link . '" class="all-results"><span>' . sprintf(esc_html__('View all %d results', 'etww'), $query->found_posts) . '<i class="fa fa-long-arrow-' . $icon . '" aria-hidden="true"></i></span></a></li>';
+                /* translators: %d: number of results */
+                $output .= '<li><a href="' . esc_url($search_link) . '" class="all-results"><span>' . esc_html(sprintf(__('View all %d results', 'envo-elementor-for-woocommerce'), $query->found_posts)) . '<i class="fa fa-long-arrow-' . esc_attr($icon) . '" aria-hidden="true"></i></span></a></li>';
             }
 
             $output .= '</ul>';
         } else {
 
             $output .= '<div class="etww-no-search-results">';
-            $output .= '<h6>' . esc_html__('No results', 'etww') . '</h6>';
-            $output .= '<p>' . esc_html__('No search results could be found, please try another search.', 'etww') . '</p>';
+            $output .= '<h6>' . esc_html__('No results', 'envo-elementor-for-woocommerce') . '</h6>';
+            $output .= '<p>' . esc_html__('No search results could be found, please try another search.', 'envo-elementor-for-woocommerce') . '</p>';
             $output .= '</div>';
         }
 
-        wp_reset_query();
+        wp_reset_postdata();
 
-        echo $output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        echo $output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- every part is escaped where it is built.
 
         die();
     }

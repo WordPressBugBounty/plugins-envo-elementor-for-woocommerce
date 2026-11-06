@@ -1,0 +1,265 @@
+/* Envo Templates picker in the Elementor editor. */
+.etww-elib {
+	--etww-accent: #39b54a;
+	--etww-accent-dark: #2a8f39;
+	--etww-pro: #f68e13;
+	--etww-ink: #1d2327;
+	--etww-muted: #6d7882;
+	--etww-line: #e3e6e8;
+	--etww-bg: #f3f4f5;
+	position: fixed;
+	inset: 0;
+	z-index: 99999;
+	display: grid;
+	place-items: center;
+	padding: 24px;
+	background: rgba(17, 24, 28, .6);
+	color: var(--etww-ink);
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+.etww-elib[hidden] {
+	display: none;
+}
+.etww-elib * {
+	box-sizing: border-box;
+}
+.etww-elib.is-busy {
+	cursor: progress;
+}
+.etww-elib__dialog {
+	display: flex;
+	flex-direction: column;
+	width: min(1200px, 100%);
+	height: min(820px, 100%);
+	border-radius: 12px;
+	background: #fff;
+	overflow: hidden;
+	box-shadow: 0 24px 60px rgba(0, 0, 0, .35);
+}
+.etww-elib__head {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 12px;
+	padding: 14px 18px;
+	border-bottom: 1px solid var(--etww-line);
+}
+.etww-elib__logo {
+	display: grid;
+	place-items: center;
+	width: 34px;
+	height: 34px;
+	border-radius: 8px;
+	background: var(--etww-accent);
+	color: #fff;
+}
+.etww-elib__logo svg {
+	width: 20px;
+	height: 20px;
+	fill: currentColor;
+}
+.etww-elib__head h2 {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 600;
+}
+.etww-elib__filters {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	gap: 8px;
+}
+.etww-elib__filters select,
+.etww-elib__filters input {
+	height: 34px;
+	padding: 0 10px;
+	border: 1px solid var(--etww-line);
+	border-radius: 6px;
+	background: #fff;
+	color: var(--etww-ink);
+	font-size: 13px;
+}
+.etww-elib__search {
+	width: 220px;
+}
+.etww-elib__manage {
+	color: var(--etww-accent-dark);
+	font-size: 13px;
+	font-weight: 600;
+	text-decoration: none;
+}
+.etww-elib__close {
+	display: grid;
+	place-items: center;
+	width: 34px;
+	height: 34px;
+	border: 0;
+	border-radius: 50%;
+	background: var(--etww-bg);
+	color: var(--etww-ink);
+	cursor: pointer;
+}
+.etww-elib__body {
+	flex: 1;
+	padding: 18px;
+	overflow-y: auto;
+	background: var(--etww-bg);
+}
+.etww-elib__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+	gap: 16px;
+}
+.etww-elib__card {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--etww-line);
+	border-radius: 10px;
+	background: #fff;
+	overflow: hidden;
+}
+.etww-elib__shot {
+	position: relative;
+	aspect-ratio: 4 / 3;
+	background: var(--etww-bg);
+	overflow: hidden;
+}
+.etww-elib__shot img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+	background-size: cover;
+	transition: object-position 2.5s ease-in-out;
+}
+.etww-elib__card:hover .etww-elib__shot img {
+	object-position: bottom;
+}
+.etww-elib__badges {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	display: flex;
+	gap: 4px;
+}
+.etww-elib__badge {
+	padding: 3px 7px;
+	border-radius: 999px;
+	background: #e9f7eb;
+	color: var(--etww-accent-dark);
+	font-size: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.etww-elib__badge.is-new {
+	background: #2271b1;
+	color: #fff;
+}
+.etww-elib__badge.is-pro {
+	background: var(--etww-pro);
+	color: #fff;
+}
+.etww-elib__info {
+	flex: 1;
+	padding: 10px 12px 4px;
+}
+.etww-elib__info strong {
+	display: block;
+	font-size: 13px;
+}
+.etww-elib__info span {
+	color: var(--etww-muted);
+	font-size: 12px;
+}
+.etww-elib__actions {
+	display: flex;
+	gap: 6px;
+	padding: 8px 12px 12px;
+}
+.etww-elib__btn {
+	display: inline-flex;
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+	min-height: 32px;
+	padding: 0 10px;
+	border: 1px solid transparent;
+	border-radius: 6px;
+	background: var(--etww-accent);
+	color: #fff;
+	font-size: 12px;
+	font-weight: 600;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+}
+.etww-elib__btn:hover {
+	background: var(--etww-accent-dark);
+	color: #fff;
+}
+.etww-elib__btn[disabled] {
+	opacity: .6;
+	cursor: progress;
+}
+.etww-elib__btn--ghost {
+	flex: 0 0 auto;
+	border-color: var(--etww-line);
+	background: #fff;
+	color: var(--etww-ink);
+}
+.etww-elib__btn--ghost:hover {
+	border-color: var(--etww-ink);
+	background: #fff;
+	color: var(--etww-ink);
+}
+.etww-elib__btn--pro {
+	background: var(--etww-pro);
+}
+.etww-elib__btn--pro:hover {
+	background: #c76c05;
+}
+.etww-elib__message {
+	margin: 60px 0;
+	color: var(--etww-muted);
+	text-align: center;
+}
+.etww-elib__spinner {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin-right: 8px;
+	border: 2px solid currentColor;
+	border-right-color: transparent;
+	border-radius: 50%;
+	vertical-align: middle;
+	animation: etww-elib-spin .7s linear infinite;
+}
+@keyframes etww-elib-spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+.etww-elib__foot {
+	padding: 10px 18px;
+	border-top: 1px solid var(--etww-line);
+	color: var(--etww-muted);
+	font-size: 12px;
+}
+@media (max-width: 782px) {
+	.etww-elib {
+		padding: 0;
+	}
+	.etww-elib__dialog {
+		height: 100%;
+		border-radius: 0;
+	}
+	.etww-elib__filters {
+		order: 5;
+		flex-basis: 100%;
+		flex-wrap: wrap;
+	}
+	.etww-elib__search {
+		width: 100%;
+	}
+}

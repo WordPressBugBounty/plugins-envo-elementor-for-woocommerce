@@ -1,3 +1,5 @@
 <?php
-// Direct access security
-wp_die();
+// Silence is golden.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}

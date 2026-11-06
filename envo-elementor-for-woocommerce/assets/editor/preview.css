@@ -1,0 +1,18 @@
+/* Envo Templates button in the "add section" area of the Elementor preview. */
+.elementor-add-section-area-button.etww-elib-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #39b54a;
+	color: #fff;
+}
+.elementor-add-section-area-button.etww-elib-button:hover,
+.elementor-add-section-area-button.etww-elib-button:focus-visible {
+	background-color: #2a8f39;
+	color: #fff;
+}
+.elementor-add-section-area-button.etww-elib-button svg {
+	width: 18px;
+	height: 18px;
+	fill: currentColor;
+}
